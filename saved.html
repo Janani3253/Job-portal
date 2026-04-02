@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saved Jobs</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="header">
+      <h1>Saved Jobs</h1>
+      <p>Review the roles you bookmarked from the portal.</p>
+    </header>
+
+    <section class="saved-section card-panel">
+      <div class="saved-header">
+        <h2>Your Bookmarks</h2>
+        <p><span id="savedCount">0</span> jobs saved</p>
+      </div>
+
+      <div id="saved-list" class="saved-list" aria-live="polite"></div>
+
+      <div class="saved-actions">
+        <button id="clearSavedBtn" class="ghost-btn" type="button">Clear Saved Jobs</button>
+        <a class="link-btn" href="index.html">Back to Portal</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="dist/savedPage.js"></script>
+</body>
+</html>

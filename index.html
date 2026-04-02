@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Job Portal</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="header">
+      <h1>Job Portal</h1>
+      <p>Discover, filter, and bookmark jobs in real time.</p>
+    </header>
+
+    <section class="filters card-panel">
+      <div class="field">
+        <label for="searchInput">Search Jobs</label>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Try Frontend, Cloud, New York..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="field">
+        <label for="companyFilter">Company</label>
+        <select id="companyFilter">
+          <option value="">All Companies</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="roleFilter">Role</label>
+        <select id="roleFilter">
+          <option value="">All Roles</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="results-header">
+      <h2>Open Positions</h2>
+      <p><span id="resultsCount">0</span> jobs found</p>
+    </section>
+
+    <section id="job-list" class="job-list" aria-live="polite"></section>
+
+    <section class="saved-section card-panel">
+      <div class="saved-header">
+        <h2>Saved Jobs</h2>
+        <p><span id="savedCount">0</span> jobs bookmarked</p>
+      </div>
+
+      <div id="saved-list" class="saved-list" aria-live="polite"></div>
+
+      <div class="saved-actions">
+        <button id="clearSavedBtn" class="ghost-btn" type="button">Clear Saved Jobs</button>
+        <a class="link-btn" href="saved.html">Open Saved Jobs Page</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="dist/main.js"></script>
+</body>
+</html>
