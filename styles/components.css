@@ -1,0 +1,142 @@
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.filters input,
+.filters select,
+.ghost-btn,
+.link-btn,
+.save-btn,
+.remove-btn {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  padding: 11px 12px;
+  background: #fbfdff;
+  color: var(--text);
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #8ab0ff;
+  box-shadow: 0 0 0 3px rgba(30, 106, 255, 0.18);
+}
+
+.job-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(22, 49, 92, 0.12);
+}
+
+.company-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #cfe0ff, #e9f1ff);
+  color: #1049ba;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.job-card h3 {
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.company-name {
+  color: var(--muted);
+}
+
+.meta {
+  color: #334666;
+  font-size: 0.95rem;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  border: 1px solid #d7e3ff;
+  background: #f3f7ff;
+  border-radius: 999px;
+  padding: 4px 9px;
+  color: #1f3c74;
+  font-size: 0.8rem;
+}
+
+.save-btn {
+  margin-top: 6px;
+  padding: 9px 12px;
+  background: var(--primary);
+  color: #fff;
+  border-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  background: var(--primary-strong);
+}
+
+.save-btn.is-saved {
+  background: #198754;
+}
+
+.remove-btn,
+.ghost-btn,
+.link-btn {
+  padding: 9px 12px;
+  background: #f8fbff;
+  cursor: pointer;
+  color: #1b335f;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover,
+.ghost-btn:hover,
+.link-btn:hover {
+  border-color: #b6cbf8;
+  background: #edf4ff;
+}
+
+.empty-state {
+  border: 1px dashed #b9caeb;
+  border-radius: 12px;
+  background: #f8fbff;
+  color: var(--muted);
+  padding: 14px;
+}

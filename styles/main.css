@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #5e6b86;
+  --primary: #1e6aff;
+  --primary-strong: #004ac7;
+  --border: #d7dfef;
+  --shadow: 0 16px 35px rgba(16, 39, 87, 0.12);
+  --radius: 16px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at 10% 10%, #dbe6ff 0%, var(--bg) 45%);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 24px;
+}
+
+a {
+  color: inherit;
+}
+
+.header {
+  display: grid;
+  gap: 8px;
+}
+
+.header h1 {
+  font-size: clamp(1.8rem, 2.3vw, 2.6rem);
+  letter-spacing: 0.2px;
+}
+
+.header p {
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.card-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(14px, 2vw, 20px);
+}
